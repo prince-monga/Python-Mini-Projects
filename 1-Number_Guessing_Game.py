@@ -18,11 +18,13 @@ def number_guessing_game():
             guess = int(input(" Enter your guess: "))
 
             # Check if the guess is correct
-            if guess == secret_number:
-                print(f"Congratulations! You guessed the number {secret_number} correctly!")
-                break
-            else:
-                print("Sorry, Try again.")
+          if guess == secret_number:
+             print(f"Congratulations! You guessed the number {secret_number} correctly!")
+             break
+          elif guess < secret_number:
+             print("Too low! Try again.")
+          else:
+             print("Too high! Try again.")
 
             # Increase the number of attempts
             attempts += 1
